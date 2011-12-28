@@ -10,3 +10,5 @@ alias mv='mv -v'
 alias rm='rm -v'
 alias which='type -a'
 
+# Extracts valid email addresses from unorganized text files
+alias emailgrep="grep -E -o '([[:alnum:]_.]+@[[:alnum:]_]+?\.[[:alpha:].]{2,6})'"
