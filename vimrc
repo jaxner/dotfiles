@@ -19,4 +19,5 @@ set expandtab             " use spaces instead of tabs
 set shiftwidth=4          " indent 4 spaces
 set smarttab              " pressing tab indents according to shiftwidth
 
-map q :q<CR>
+" q instantly quits vim and discards changes
+map q :q!<CR>
