@@ -7,7 +7,7 @@ set nowrap                " don't wrap long lines
 set showmatch             " show matching brackets
 
 " strings to use instead of unprintable characters in 'list' mode
-set listchars=tab:>-,eol:$,trail:·,extends:»
+set listchars=tab:>-,eol:$,trail:.,extends:\
 
 set incsearch             " show search results as you type
 set smartcase             " ignore case
