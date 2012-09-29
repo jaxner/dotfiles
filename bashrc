@@ -5,7 +5,7 @@
 
 # Source all regular files in .bashrc.d/
 if [ -d ~/.bashrc.d ]; then
-    for file in ~/.bashrc.d/*.sh; do
+    for file in ~/.bashrc.d/*[^~#]; do
 	if [ -f "$file" ]; then
 	    source "$file"
 	fi
