@@ -9,7 +9,6 @@ alias lx='ll -XB --hide=#* --group-directories-first'
 alias lsd='\ls -d */'
 alias lsh='ls -d .*'
 
-alias clear='clear && ls'
 alias df='df -Th'
 alias du='du -ch'
 alias ping='ping -c 5'
