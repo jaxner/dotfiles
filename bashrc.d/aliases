@@ -1,14 +1,43 @@
 #!/bin/bash
 
-alias cp='cp -rv'
-alias df='df -h'
-alias du='du -h'
-alias la='ls -AF'
-alias ll='ls -AFhl'
-alias lt='ls -Flrt'
-alias mv='mv -v'
-alias rm='rm -v'
-alias which='type -a'
+alias ls='ls -hF'
+alias la='ls -A'
+alias ll='ls -Ao'
+alias lt='ll -tr'
+alias lk='ll -Sr'
+alias lx='ll -XB --hide=#* --group-directories-first'
+alias lsd='\ls -d */'
+alias lsh='ls -d .*'
 
-# Extracts valid email addresses from unorganized text files
-alias emailgrep="grep -E -o '([[:alnum:]_.]+@[[:alnum:]_]+?\.[[:alpha:].]{2,6})'"
+alias clear='clear && ls'
+alias df='df -Th'
+alias du='du -ch'
+alias ping='ping -c 5'
+alias reload='source ~/.bashrc'
+alias wcat='wget -qO -'
+alias wget='wget -c'
+alias which='type -P'
+
+if [ -x /usr/bin/vim ]
+then
+    alias vi=vim
+fi
+
+if [ -x /usr/bin/dircolors ]
+then
+    eval "$(dircolors -b)"
+    alias ls='ls -hp --color=auto'
+    alias grep='grep --color=auto'
+fi
+
+if [ -f /etc/arch_release ]
+then
+    alias pacman='sudo pacman'
+    alias update='yes | sudo pacman -Syu'
+    alias netcfg='sudo netcfg'
+    alias wifi='sudo wifi-select'
+    alias iwlist='sudo iwlist wlan0'
+    alias halt='sudo shutdown -h now'
+    alias poweroff='sudo shutdown -P now'
+    alias reboot='sudo shutdown -r now'
+fi
