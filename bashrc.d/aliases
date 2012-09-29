@@ -29,7 +29,7 @@ then
     alias grep='grep --color=auto'
 fi
 
-if [ -f /etc/arch_release ]
+if [ -f /etc/arch-release ]
 then
     alias pacman='sudo pacman'
     alias update='yes | sudo pacman -Syu'
